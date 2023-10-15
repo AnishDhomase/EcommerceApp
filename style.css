@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+
+/* GLOBAL */
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+
+    font-family: 'Poppins', sans-serif;
+    color: var(--sub-color);
+}
+a{
+    text-decoration: none;
+}
+.hidden{
+    display: none !important;
+}
+h1{
+    font-size: 50px;
+}
+h2{
+    font-size: 35px;
+}
+.Btn{
+    padding: 5px 10px;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--pop-color);
+}
+:root{
+    --bg-color : #f2e9ff;
+    --main-color : #1AACAC;
+    --sub-color : #690c9f;
+    --pop-color : #FF8080;
+}
+/*  */
+
+
+
+/* CONTAINERS */
+body{
+    width: 100vw;
+    position: relative;
+    overflow-x: hidden;
+}
+#container{
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+
+}
+/*  */
+
+
+
+/* NAV */
+nav{
+    height: 10vh;
+    width: 100%;
+    padding: 10px 38px;
+
+    display: flex;
+    justify-content: space-between;
+
+    background-color: var(--bg-color);
+}
+nav .logo{
+    display: flex;
+    align-items: center;
+    font-size: 25px;
+    font-weight: 800;
+
+    color: var(--main-color);
+}
+nav .navLinks{
+    width: 420px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    font-weight: 500;
+}
+nav .navLinks #pagesLinks{
+    width: 80%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+nav .navLinks i{
+    font-size: 20px;
+}
+nav .navLinks .navCart i{
+    color: var(--pop-color);
+}
+nav .navLinks .navHamburger{
+    display: none;
+}
+/*  */
+
+
+/* HEADER */
+#header{
+    height: 90vh;
+    width: 100%;
+    position: relative;
+    overflow-y: hidden;
+
+    padding: 10px 38px;
+}
+#header .imgDiv{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -111;
+
+    opacity: 0.3;
+}
+#header .content{
+    position: absolute;
+    top: 25vh;
+    right: 5vw;
+}
+#header img{
+    overflow-x: hidden;
+    height: 100%;
+    width: 100%;
+}
+#header h1{
+   
+}
+#header h4{
+    color: var(--main-color);
+}
+#header h2{
+    
+}
+#header button{
+    margin-top: 10px;
+}
+/*  */
+
+
+/* HAMBURGER POPUP */
+.Ham-popup{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 70vw;
+    height: 100vh;
+    padding: 15vh 40px;
+
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+
+    background-color: var(--main-color);
+    font-size: 18px;
+}
+.Ham-popup #Ham-close{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-weight: 500;
+}
+/*  */
+
+
+
+/* RESPONSIVENESS FOR TABLET */
+@media screen and (max-width: 700px) {
+    nav{
+        padding: 10px 15px;
+    }
+    nav .navLinks #pagesLinks{
+        display: none;
+    }
+    nav .navLinks{
+        /* width: 420px; */
+        display: flex;
+        justify-content: flex-end;
+    }
+    nav .navLinks .navHamburger{
+        display: block;
+        margin-left: 20px;
+    }
+    #header{
+        padding: 10px 15px;
+    }
+    #header .content{
+        position: absolute;
+        top: 25vh;
+        right: 5vw;
+    }
+    #header img{
+        overflow-x: hidden;
+        height: 100%;
+        width: 100%;
+    }
+    #header h1{
+        font-size: 40px;
+    }
+    #header h4{
+        
+    }
+    #header h2{
+        font-size: 30px;
+    }
+    #header button{
+        margin-top: 10px;
+    }
+}
+@media screen and (max-width: 530px) {
+    #header .content{
+        position: absolute;
+        top: 55px;
+        right: 5vw;
+    }
+    #header h1{
+        font-size: 30px;
+    }
+    #header h4{
+        font-size: 11px;
+    }
+    #header h2{
+        font-size: 22px;
+    }
+    #header button{
+        padding: 5px 8px;
+        font-size: 12px;
+    }
+}
+@media screen and (max-width: 360px) {
+    #header .content{
+        position: absolute;
+        top: 25px;
+        right: 5vw;
+    }
+}
