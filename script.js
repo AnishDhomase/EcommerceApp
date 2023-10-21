@@ -8,12 +8,12 @@ const hamCloseIcon= document.querySelector("#Ham-close");
 
 hamBurgerIcon.addEventListener("click", function(ev){
     ev.preventDefault();
-    container.classList.add("hidden");
+    container.classList.add("hideContainer");
     hamPopup.classList.add("Hamactive");
 });
 hamCloseIcon.addEventListener("click", function(ev){
     ev.preventDefault();
-    container.classList.remove("hidden");
+    container.classList.remove("hideContainer");
     hamPopup.classList.remove("Hamactive");
 
 });
