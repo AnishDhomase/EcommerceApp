@@ -1,7 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap');
 
 /* GLOBAL */
+:root{
+    --bg-color : #f2e9ff;
+    --main-color : #1AACAC;
+    --sub-color : #690c9f;
+    --pop-color : #FF8080;
+    --pop-light-color : #ffc7c7;
+}
 *{
     box-sizing: border-box;
     padding: 0;
@@ -16,6 +23,9 @@ a{
 .hidden{
     display: none !important;
 }
+.lowOpacity{
+    opacity: 0.2;
+}
 h1{
     font-size: 50px;
 }
@@ -26,13 +36,16 @@ h2{
     padding: 5px 10px;
     font-size: 18px;
     font-weight: 700;
-    color: var(--pop-color);
+
+    outline: none;
+    background-color: var(--main-color);
+    color: white;
+    border-radius: 10px;
+    border: 2px solid var(--sub-color);
 }
-:root{
-    --bg-color : #f2e9ff;
-    --main-color : #1AACAC;
-    --sub-color : #690c9f;
-    --pop-color : #FF8080;
+.Btn:hover{
+    cursor: pointer;
+    scale: 1.06 1.06;
 }
 /*  */
 
@@ -87,8 +100,12 @@ nav .navLinks #pagesLinks{
     justify-content: space-evenly;
     align-items: center;
 }
+
 nav .navLinks i{
     font-size: 20px;
+}
+nav .navLinks i:hover, nav .navLink:hover{
+    scale: 1.12 1.12;
 }
 nav .navLinks .navCart i{
     color: var(--pop-color);
@@ -101,53 +118,96 @@ nav .navLinks .navHamburger{
 
 /* HEADER */
 #header{
-    height: 90vh;
     width: 100%;
     position: relative;
     overflow-y: hidden;
+    display: flex;
 
     padding: 10px 38px;
 }
 #header .imgDiv{
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -111;
-
-    opacity: 0.3;
+    padding: 100px 0;
+    width: 40%;
 }
 #header .content{
-    position: absolute;
-    top: 25vh;
-    right: 5vw;
+    width: 60%;
+    padding: 0 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 #header img{
+    max-width: 360px;
     overflow-x: hidden;
-    height: 100%;
     width: 100%;
+    opacity: 0.8;
 }
 #header h1{
-   
+    line-height: 55px;
+    margin-bottom: 8px;
+    font-weight: 900;
+    font-family: 'Cedarville Cursive', cursive;
 }
 #header h4{
     color: var(--main-color);
 }
 #header h2{
-    
+    margin-bottom: 8px;
+    line-height: 40px;
 }
-#header button{
+#header a{
     margin-top: 10px;
+    width: 120px;
 }
 /*  */
 
 
+/* FEATURES */
+/* #features{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    
+    padding: 10px 38px;
+
+    background-color: var(--sub-color);
+    
+}
+.featcard{
+    width: 170px;
+    padding: 10px 20px;
+    margin: 0 19px;
+
+    background-color: var(--bg-color);
+    border-radius: 20px;
+}
+.featcard h2{
+    text-align: center;
+
+    color: var(--main-color);
+    font-size: 25px;
+}
+.featcard .row1{
+    width: 100%;
+}
+.featcard .row1 img{
+    width: 100%;
+} */
+
+/*  */
+
+
 /* HAMBURGER POPUP */
+.Hamactive{
+    right: 0 !important;
+}
 .Ham-popup{
     position: fixed;
     top: 0;
-    right: 0;
-    width: 70vw;
+    right: -85vw;
+    z-index: 1000;
+    width: 85vw;
     height: 100vh;
     padding: 15vh 40px;
 
@@ -155,8 +215,10 @@ nav .navLinks .navHamburger{
     flex-direction: column;
     row-gap: 15px;
 
-    background-color: var(--main-color);
+    background-color: var(--pop-light-color);
     font-size: 18px;
+
+    transition: all 0.5s ease;
 }
 .Ham-popup #Ham-close{
     position: absolute;
@@ -186,55 +248,41 @@ nav .navLinks .navHamburger{
         margin-left: 20px;
     }
     #header{
-        padding: 10px 15px;
+        display: flex;
+        flex-direction: column;
+        padding: 10px 38px;
+
+        text-align: center;
+    }
+    #header .imgDiv{
+        width: 100%;
+        padding: 20px 0;
+
+
     }
     #header .content{
-        position: absolute;
-        top: 25vh;
-        right: 5vw;
+        width: 100%;
+        padding: 0 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        
+
     }
     #header img{
-        overflow-x: hidden;
-        height: 100%;
-        width: 100%;
+        max-width: 300px;
     }
-    #header h1{
-        font-size: 40px;
+    #header a{
+        margin: 10px auto;
+        width: 120px;
     }
-    #header h4{
-        
-    }
-    #header h2{
-        font-size: 30px;
-    }
-    #header button{
-        margin-top: 10px;
-    }
+    
+    
 }
 @media screen and (max-width: 530px) {
-    #header .content{
-        position: absolute;
-        top: 55px;
-        right: 5vw;
-    }
-    #header h1{
-        font-size: 30px;
-    }
-    #header h4{
-        font-size: 11px;
-    }
-    #header h2{
-        font-size: 22px;
-    }
-    #header button{
-        padding: 5px 8px;
-        font-size: 12px;
-    }
+
 }
 @media screen and (max-width: 360px) {
-    #header .content{
-        position: absolute;
-        top: 25px;
-        right: 5vw;
-    }
+    
 }
