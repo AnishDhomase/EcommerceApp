@@ -56,6 +56,8 @@ body{
     width: 100vw;
     position: relative;
     overflow-x: hidden;
+
+    user-select: none;
 }
 #container{
     width: 100%;
@@ -216,7 +218,8 @@ nav .navLinks .navHamburger{
     row-gap: 15px;
 
     background-color: var(--pop-light-color);
-    font-size: 18px;
+    font-size: 25px;
+    font-weight: 500;
 
     transition: all 0.5s ease;
 }
@@ -225,6 +228,15 @@ nav .navLinks .navHamburger{
     top: 10px;
     right: 10px;
     font-weight: 500;
+
+    font-size: 28px;
+}
+
+.Ham-popup .hamLink :hover{
+    background-color: var(--pop-color);
+}
+.Ham-popup .hamLink :active{
+    background-color: var(--pop-color);
 }
 /*  */
 
@@ -276,6 +288,13 @@ nav .navLinks .navHamburger{
     #header a{
         margin: 10px auto;
         width: 120px;
+    }
+    nav .logo{
+        font-size: 29px;
+
+    }
+    nav .navLinks i{
+        font-size: 23px;
     }
     
     
